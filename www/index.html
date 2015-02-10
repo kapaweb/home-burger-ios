@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <base href="index.php" />
+    <base href="http://homeburger.gr" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery-mobile.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <meta charset="utf-8" />
+    <title>HomeBurger.gr</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+</head>
+<body>
+<div id="aaa"></div>
+<center>
+<img src="img/homeburger.png"  width="100%" style="max-width:708px;" alt="HomeBurger">
+<div id="load"><br><br><h2>Γίνεται σύνδεση...</h2><br>
+<img src="img/ajax-loader.gif" width="300" height="30"></div>
+</center>
+
+<div class="cd-tabs" style="visibility:hidden;">
+    <nav>
+        <ul class="cd-tabs-navigation">
+            <li><a data-content="inbox" class="selected" href="#0">Είσοδος</a></li>
+            <li><a data-content="new" href="#0">Εγγραφή</a></li>
+        </ul> <!-- cd-tabs-navigation -->
+    </nav>
+
+    <ul class="cd-tabs-content">
+        <li data-content="new">
+            <label for="name">Ονοματεπώνυμο:</label> <input name="name" type="text" class="textfield" id="name" value="" placeholder="Ονοματεπώνυμο" />
+            <label for="phone">Τηλέφωνo:</label> <input name="phone" type="text" class="textfield" id="phone" value=""  placeholder="Τηλέφωνο"/>
+            <label for="addr">Διεύθυνση / ΤΚ:</label> <input name="addr" type="text" class="textfield" id="addr" value=""  placeholder="Διεύθυνση / ΤΚ"/>
+            <label for="email">e-mail:</label> <input name="email" type="text" class="textfield" id="email" value=""  placeholder="e-mail"/>
+
+                <select id="per" style="width:90%; height:30px;">
+                    <option value="">Περιοχή&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option value="ΑΓΙΟΣ ΔΗΜΗΤΡΙΟΣ">ΑΓΙΟΣ ΔΗΜΗΤΡΙΟΣ</option>
+                    <option value="ΑΛΙΜΟΣ">ΑΛΙΜΟΣ</option>
+                    <option value="ΑΜΠΕΛΟΚΗΠΟΙ">ΑΜΠΕΛΟΚΗΠΟΙ</option>
+                    <option value="ΑΡΓΥΡΟΥΠΟΛΗ">ΑΡΓΥΡΟΥΠΟΛΗ</option>
+                    <option value="ΒΟΥΛΑ">ΒΟΥΛΑ</option>
+                    <option value="ΒΥΡΩΝΑΣ">ΒΥΡΩΝΑΣ</option>
+                    <option value="ΓΚΥΖΗ">ΓΚΥΖΗ</option>
+                    <option value="ΓΛΥΦΑΔΑ">ΓΛΥΦΑΔΑ</option>
+                    <option value="ΔΑΦΝΗ">ΔΑΦΝΗ</option>
+                    <option value="ΕΛΛΗΝΙΚΟ">ΕΛΛΗΝΙΚΟ</option>
+                    <option value="ΕΞΑΡΧΕΙΑ">ΕΞΑΡΧΕΙΑ</option>
+                    <option value="ΖΩΓΡΑΦΟΥ">ΖΩΓΡΑΦΟΥ</option>
+                    <option value="ΗΛΙΟΥΠΟΛΗ">ΗΛΙΟΥΠΟΛΗ</option>
+                    <option value="ΗΛΙΣΙΑ">ΗΛΙΣΙΑ</option>
+                    <option value="ΚΑΙΣΑΡΙΑΝΗ">ΚΑΙΣΑΡΙΑΝΗ</option>
+                    <option value="ΚΑΛΛΙΘΕΑ">ΚΑΛΛΙΘΕΑ</option>
+                    <option value="ΚΟΛΩΝΑΚΙ">ΚΟΛΩΝΑΚΙ</option>
+                    <option value="ΚΟΥΚΑΚΙ">ΚΟΥΚΑΚΙ</option>
+                    <option value="ΚΥΨΕΛΗ">ΚΥΨΕΛΗ</option>
+                    <option value="ΚΟΛΩΝΟΣ">ΚΟΛΩΝΟΣ</option>
+                    <option value="ΜΕΤΑΞΟΥΡΓΕΙΟ">ΜΕΤΑΞΟΥΡΓΕΙΟ</option>
+                    <option value="ΜΟΣΧΑΤΟ">ΜΟΣΧΑΤΟ</option>
+                    <option value="ΜΕΤΣ">ΜΕΤΣ</option>
+                    <option value="ΝΕΑ ΦΙΛΟΘΕΗ">ΝΕΑ ΦΙΛΟΘΕΗ</option>
+                    <option value="ΝΕΑ ΣΜΥΡΝΗ">ΝΕΑ ΣΜΥΡΝΗ</option>
+                    <option value="ΝΕΟΣ ΚΟΣΜΟΣ">ΝΕΟΣ ΚΟΣΜΟΣ</option>
+                    <option value="ΝΕΑΠΟΛΗ">ΝΕΑΠΟΛΗ</option>
+                    <option value="ΠΑΓΚΡΑΤΙ">ΠΑΓΚΡΑΤΙ</option>
+                    <option value="ΠΑΝΟΡΜΟΥ">ΠΑΝΟΡΜΟΥ</option>
+                    <option value="ΠΑΤΗΣΙΑ">ΠΑΤΗΣΙΑ</option>
+                    <option value="ΠΑΛΑΙΟ ΦΑΛΗΡΟ">ΠΑΛΑΙΟ ΦΑΛΗΡΟ</option>
+                    <option value="ΠΕΤΡΑΛΩΝΑ">ΠΕΤΡΑΛΩΝΑ</option>
+                    <option value="ΠΛΑΚΑ">ΠΛΑΚΑ</option>
+                    <option value="ΣΕΠΟΛΙΑ">ΣΕΠΟΛΙΑ</option>
+                    <option value="ΤΑΥΡΟΣ">ΤΑΥΡΟΣ</option>
+                    <option value="ΥΜΗΤΤΟΣ">ΥΜΗΤΤΟΣ</option>
+                </select>
+            <label for="flor">Όροφος:</label> <input name="flor" type="text" class="textfield" id="flor" value=""  placeholder="Όροφος"/>
+            <label for="koud">Όνομα στο κουδούνι:</label> <input name="koud" type="text" class="textfield" id="koud" value=""  placeholder="Ονοματεπώνυμο στο κουδούνι"/>
+            <label for="message">Κωδικός:</label> <input name="password" class="textfield" type="password" id="password"  placeholder="Κωδικός" required/>
+            <label for="message">Επιβεβαίωση κωδικού:</label> <input name="cpassword" class="textfield" type="password" id="cpassword"  placeholder="Επιβεβαίωση Κωδικού" required/>
+            <br><button id="driver" style="width:90%; height:30px;">Εγγραφή</button>
+            <div id="stage" style=" color:#FF6600;"></div>            
+        </li>
+
+        <li data-content="inbox" class="selected">
+
+            <label for="email">e-mail:</label> <input name="uname" type="text" class="textfield" id="uname" value="" />
+            <label for="passwd">Κωδικός:</label> <input name="passwd" type="password" class="textfield" id="passwd" value="" />
+            <br><button id="button2" style="width:90%; height:30px;">Είσοδος</button>
+            <div id="stage2" style="color:#FF6600;"></div>
+            <a href="http://homeburger.gr/activation">Υπενθύμιση κωδικού</a>
+        </li>
+    </ul> <!-- cd-tabs-content -->
+</div>
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        if (window.localStorage.getItem('user') !== undefined || window.localStorage.getItem('user') !== null) {
+            $("#uname").val(window.localStorage.getItem('user'));
+            $("#passwd").val(window.localStorage.getItem('passwd'));
+            var uname = $("#uname").val();
+            var passwd = $("#passwd").val();
+            var message= 12391239123912111;
+
+            $("#stage2").load('http://homeburger.gr/app2/order.php', {"passwd": passwd, "uname": escape(uname), "message":message} );
+
+
+        } else {
+            var uname = $("#uname").val();
+            var passwd = $("#passwd").val();
+
+            if(uname !== '' && passwd!== '') {
+                $("#stage2").load('http://homeburger.gr/app2/order.php', {"passwd": passwd, "uname": escape(uname)} );
+            }
+        }
+
+        $("#driver").click(function(event){
+            var name= $("#name").val();
+            var phone= $("#phone").val();
+            var email= $("#email").val();
+            var addr= $("#addr").val();
+            var per= $("#per").val();
+            var flor= $("#flor").val();
+            var koud= $("#koud").val();
+            var password= $("#password").val();
+            var cpassword= $("#cpassword").val();
+            var message= 3123919391233111;
+            $("#stage").load('http://homeburger.gr/app2/order.php', {"password":password,"cpassword":cpassword,"name":name,"koud":koud,"phone":phone,"message":message,"email":email,"addr":addr,"flor":flor,"per":per} );
+        });
+
+
+        $("#button2").click(function(event){
+            var passwd = $("#passwd").val();
+            var uname = $("#uname").val();
+
+            window.localStorage.setItem('user', uname);
+            window.localStorage.setItem('passwd', passwd);
+
+            var message= 12391239123912111;
+            $("#stage2").load('http://homeburger.gr/app2/order.php', {"passwd":passwd,"uname":escape(uname),"message":message} );
+        });
+            var passwd = $("#passwd").val();
+            var uname = $("#uname").val();
+
+            window.localStorage.setItem('user', uname);
+            window.localStorage.setItem('passwd', passwd);
+
+            var message= 12391239123912111;
+            $("#stage2").load('http://homeburger.gr/app2/order.php', {"passwd":passwd,"uname":escape(uname),"message":message} );
+					
+    });
+
+	    $(document).ready(function() {
+		$("#load").fadeOut("normal", function() {
+			$(this).remove();
+			$(".cd-tabs").removeAttr( 'style' );
+		});
+    });
+	
+    $(document).ready(function() {
+		 $(".cd-tabs").removeAttr( 'style' );
+		 var htmlString = $( "#aaa" ).html();
+		 $( "#stage" ).text( htmlString );
+		 $("#load").remove();
+    });
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
